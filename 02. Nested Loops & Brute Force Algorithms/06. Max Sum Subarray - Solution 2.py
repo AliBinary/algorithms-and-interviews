@@ -1,12 +1,12 @@
 def maxSumSubArray(nums: list[int]) -> int:
-    # O(n^2) / O(1)
-    greatestSum = nums[0]
-    for i in range(len(nums)):  # O(n)
-        currentSum = 0
-        for j in range(i, len(nums)):  # O(n)
-            currentSum += nums[j]  # O(1)
-            greatestSum = max(greatestSum, currentSum)
-    return greatestSum
+  # O(n^2) / O(1)
+  greatestSum = nums[0]
+  for i in range(len(nums)):  # O(n)
+    currentSum = 0
+    for j in range(i, len(nums)):  # O(n)
+      currentSum += nums[j]  # O(1)
+      greatestSum = max(greatestSum, currentSum)
+  return greatestSum
 
 
 print(maxSumSubArray([-2, -5, 6, -2, -3, 1, 5, -6]))
