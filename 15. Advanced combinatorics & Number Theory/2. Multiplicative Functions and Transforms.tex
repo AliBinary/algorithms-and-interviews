@@ -1,0 +1,13 @@
+\textbf{Multiplicative functions:} $f$ is multiplicative if $f(ab)=f(a)f(b)$ whenever $\gcd(a,b)=1$. \\[1mm]
+Examples: $1(n)=1$, $\mathrm{id}(n)=n$, $\varphi(n)$, $\mu(n)$, $d(n)$ (number of divisors). \\
+
+\textbf{Möbius function $\mu(n)$:} \\[1mm]
+$\mu(1)=1$. If $n$ has a squared prime factor, $\mu(n)=0$. Otherwise $\mu(n)=(-1)^k$, where $k$ is the number of distinct primes dividing $n$. \\
+
+\textbf{Möbius inversion:} \\[1mm]
+If $g(n)=\sum_{d\mid n} f(d)$, then $f(n)=\sum_{d\mid n} \mu(d) g(n/d)$ \\
+
+\textbf{Divisor count $d(n)$ and divisor sum $\sigma_k(n)$:} \\[1mm]
+If $n=\prod p_i^{e_i}$, then
+$d(n)=\prod (e_i+1)$,\quad $\sigma_k(n)=\prod \frac{p_i^{(e_i+1)k}-1}{p_i^k-1}$ \\
+Especially $\sigma_1(n)=\sigma(n)$ is the sum of divisors. \\

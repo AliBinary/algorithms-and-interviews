@@ -1,0 +1,19 @@
+\[
+\gcd(a,b) = 
+\begin{cases}
+b & a \bmod b = 0 \\
+\gcd(b, a \bmod b) & \text{otherwise}
+\end{cases}
+\]
+
+Fast exponentiation:
+\[
+a^b \bmod m =
+\begin{cases}
+1 & b=0 \\
+(a^{b/2})^2 \bmod m & b \text{ even} \\
+a \cdot (a^{b-1} \bmod m) & b \text{ odd}
+\end{cases}
+\]
+
+Sieve of Eratosthenes: find primes up to $n$ in $O(n \log \log n)$.

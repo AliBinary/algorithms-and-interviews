@@ -1,0 +1,22 @@
+\textbf{Prefix-function (KMP):} \\[1mm]
+Computes the length of the longest prefix which is also a suffix. Used in KMP for pattern matching. \\
+Complexity: $O(n+m)$. \\
+
+\textbf{Z-function:} \\[1mm]
+$Z[i] =$ length of the longest prefix starting at $s[i]$. \\
+Complexity: $O(n)$. \\
+
+\textbf{Manacher’s algorithm (Palindrome radii):} \\[1mm]
+Computes all palindromic substrings in $O(n)$. \\
+
+\textbf{Suffix Array + LCP:} \\[1mm]
+- Construct with radix sort in $O(n\log n)$, or SA-IS in $O(n)$. \\
+- LCP with Kasai in $O(n)$. \\
+Applications: search, longest repeated substring, count distinct substrings. \\
+
+\textbf{Aho-Corasick Automaton:} \\[1mm]
+For multiple patterns (dictionary matching). Build: $O(\sum |p|)$, query $O(|text|+occ)$. \\
+
+\textbf{Rolling Hash (Polynomial Hash):} \\[1mm]
+$H[i]=\sum_{k=0}^{i-1} s[k]\cdot p^k \pmod M$. \\
+Applications: substring comparison, Rabin–Karp. \\

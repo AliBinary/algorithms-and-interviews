@@ -1,0 +1,29 @@
+\textbf{Binomial identities:} \\[1mm]
+$\displaystyle \sum_{k=0}^n \binom{n}{k} = 2^n$,\quad
+$\displaystyle \sum_{k=0}^n (-1)^k\binom{n}{k}=0\ (n\ge1)$ \\
+
+\textbf{Algebraic identities:} \\[1mm]
+$\displaystyle \binom{n}{k} = \binom{n}{n-k}$,\quad Pascal: $\binom{n}{k}=\binom{n-1}{k}+\binom{n-1}{k-1}$ \\
+
+\textbf{Vandermonde:} \\[1mm]
+$\displaystyle \sum_{k} \binom{r}{k}\binom{s}{n-k}=\binom{r+s}{n}$ \\
+
+\textbf{Multiset / combinations with repetition:} \\[1mm]
+$\displaystyle \binom{n+k-1}{k-1}$ ways to distribute $n$ identical items into $k$ bins \\
+
+\textbf{Stirling numbers (2nd kind):} \\[1mm]
+$S(n,k)$: partitions of $n$ labeled objects into $k$ nonempty unlabeled subsets. \\
+Recurrence: $S(n,k)=kS(n-1,k)+S(n-1,k-1)$ \\
+
+\textbf{Stirling numbers (1st kind, unsigned):} \\[1mm]
+$c(n,k)$: coefficients in falling factorials. Recurrence: $c(n,k) = c(n-1,k-1) + (n-1)c(n-1,k)$ \\
+
+\textbf{Bell numbers (partitions):} \\[1mm]
+$B_{n}=\sum_{k=0}^n S(n,k)$,\quad $B_{n+1}=\sum_{k=0}^n \binom{n}{k} B_k$ \\
+
+\textbf{Inclusion--Exclusion (general):} \\[1mm]
+$\displaystyle \left|\bigcup_{i=1}^m A_i\right|
+=\sum_{i} |A_i| - \sum_{i<j}|A_i\cap A_j| + \sum_{i<j<k} |A_i\cap A_j\cap A_k| - \cdots$ \\
+
+\textbf{Polya / Burnside (counting up to symmetry):} \\[1mm]
+$|X/G|=\dfrac{1}{|G|}\sum_{g\in G} |\mathrm{Fix}(g)|$ \\

@@ -1,0 +1,29 @@
+\textbf{KMP prefix-function:}
+\begin{verbatim}
+pi[0]=0
+for i=1..n-1:
+  j=pi[i-1]
+  while j>0 and s[i]!=s[j]:
+    j=pi[j-1]
+  if s[i]==s[j]: j++
+  pi[i]=j
+\end{verbatim}
+
+\textbf{Z-function:}
+\begin{verbatim}
+l=0,r=0
+for i=1..n-1:
+  if i<=r: z[i]=min(r-i+1,z[i-l])
+  while i+z[i]<n and s[z[i]]==s[i+z[i]]: z[i]++
+  if i+z[i]-1>r: l=i; r=i+z[i]-1
+\end{verbatim}
+
+\textbf{Pollard Rho (sketch):}
+\begin{verbatim}
+def f(x): return (x*x+c)%n
+x,y,d=2,2,1
+while d==1:
+  x=f(x); y=f(f(y))
+  d=gcd(abs(x-y),n)
+if d!=n: return d
+\end{verbatim}

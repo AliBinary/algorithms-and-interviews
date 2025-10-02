@@ -1,0 +1,8 @@
+\textbf{Pollard Rho:} Probabilistic factorization algorithm for large integers. Average $O(n^{1/4})$. \\[1mm]
+Idea: function $f(x)=(x^2+c)\bmod n$, find cycle with Floyd. \\
+
+\textbf{Fermat factorization:} Good for numbers close to perfect squares: $n=a^2-b^2=(a-b)(a+b)$. \\[1mm]
+
+\textbf{Miller–Rabin primality test:} \\[1mm]
+For odd $n$, write $n-1=2^s d$. Check $a^d\equiv1$ or $a^{2^r d}\equiv-1$. Otherwise composite. \\
+Probabilistic, with fixed witnesses can be deterministic up to $2^{64}$. \\

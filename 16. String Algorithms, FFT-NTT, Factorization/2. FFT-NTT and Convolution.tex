@@ -1,0 +1,11 @@
+\textbf{Discrete Fourier Transform (DFT):} \\[1mm]
+$A_k=\sum_{j=0}^{n-1} a_j \omega^{jk}$, \quad $\omega=e^{2\pi i/n}$. \\
+
+\textbf{FFT:} Computes DFT in $O(n\log n)$. \\[1mm]
+Applications: polynomial multiplication, big integer multiplication. \\
+
+\textbf{NTT (Number Theoretic Transform):} \\[1mm]
+Analog of FFT over a prime modulus $p=k2^m+1$. Example: $p=998244353$, primitive root=3. \\
+
+\textbf{Convolution Complexity:} \\[1mm]
+Naive $O(n^2)$, Karatsuba $O(n^{\log_23})$, FFT/NTT $O(n\log n)$. \\

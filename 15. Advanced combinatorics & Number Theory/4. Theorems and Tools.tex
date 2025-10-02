@@ -1,0 +1,21 @@
+\textbf{Fermat's little theorem:} \\[1mm]
+$a^{p}\equiv a \pmod p$,\quad if $\gcd(a,p)=1$ then $a^{p-1}\equiv 1\pmod p$ \\
+
+\textbf{Euler's theorem:} \\[1mm]
+$a^{\varphi(n)}\equiv 1 \pmod n$ if $\gcd(a,n)=1$ \\
+
+\textbf{Multiplicative order:} \\[1mm]
+$\mathrm{ord}_n(a)$ is the smallest $k$ with $a^k\equiv1\pmod n$; always divides $\lambda(n)$ \\
+
+\textbf{Primitive root:} \\[1mm]
+Exists for $n=2,4,p^k,2p^k$ with odd prime $p$. \\
+
+\textbf{Chinese Remainder Theorem (CRT):} \\[1mm]
+If $m_i$ are pairwise coprime, the system $x\equiv a_i\pmod{m_i}$ has a unique solution $\pmod{\prod m_i}$. \\
+
+\textbf{Lucas theorem (for $\binom{n}{k}\pmod p$, $p$ prime):} \\[1mm]
+Writing $n,k$ in base $p$: $n=\sum n_i p^i,\ k=\sum k_i p^i$, then \\
+$\displaystyle \binom{n}{k}\equiv \prod_i \binom{n_i}{k_i}\pmod p$ \\
+
+\textbf{Lifting The Exponent (LTE):} \\[1mm]
+For evaluating $\nu_p(x^n-y^n)$ there are formulas depending on $p,x,y$ (handy in contests). \\

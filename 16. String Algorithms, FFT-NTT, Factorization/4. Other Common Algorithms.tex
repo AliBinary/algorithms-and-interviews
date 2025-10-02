@@ -1,0 +1,13 @@
+\textbf{Union-Find (DSU):} \\[1mm]
+Operations: find(x), union(x,y). Optimizations: path compression, union by rank. \\
+Amortized complexity: $O(\alpha(n))$ (inverse Ackermann, almost constant). \\
+
+\textbf{Binary Lifting (LCA):} \\[1mm]
+Precompute $up[v][k]$: $2^k$-th ancestor. \\
+$O(n\log n)$ build, $O(\log n)$ query. \\
+
+\textbf{Segment Tree:} \\[1mm]
+Supports sum, min, lazy propagation. Complexity $O(\log n)$. \\
+
+\textbf{Fenwick Tree (BIT):} \\[1mm]
+Supports prefix sums in $O(\log n)$. Lighter memory than segment tree. \\

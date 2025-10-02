@@ -1,0 +1,21 @@
+\textbf{Knapsack:} \\[1mm]
+- 0/1: $O(nW)$. \\
+- Unbounded: $O(nW)$. \\
+- Optimizations: bitset, divide \& conquer. \\
+
+\textbf{LIS (Longest Increasing Subsequence):} \\[1mm]
+- $O(n\log n)$ via patience sorting. \\
+
+\textbf{Matrix Chain Multiplication:} \\[1mm]
+- $dp[i][j]=\min_{k}(dp[i][k]+dp[k+1][j]+cost)$. \\
+
+\textbf{Edit Distance:} \\[1mm]
+- $dp[i][j]=\min\{dp[i-1][j]+1, dp[i][j-1]+1, dp[i-1][j-1]+(a_i\ne b_j)\}$. \\
+- Complexity $O(nm)$. \\
+
+\textbf{Subset Sum / Partition:} \\[1mm]
+- Boolean DP: $dp[i][s]=true$ if subset of first $i$ sums to $s$. \\
+
+\textbf{Bitmask DP (TSP):} \\[1mm]
+- $dp[mask][i]=$ shortest path covering set mask ending at $i$. \\
+- $O(n2^n)$. \\

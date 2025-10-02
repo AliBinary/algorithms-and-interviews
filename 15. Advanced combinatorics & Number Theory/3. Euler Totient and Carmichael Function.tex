@@ -1,0 +1,14 @@
+\textbf{Euler's totient $\varphi(n)$:} \\[1mm]
+$\varphi(n)=n\prod_{p\mid n}\left(1-\frac{1}{p}\right)$ \\
+If $n=\prod p_i^{e_i}$, then $\varphi(n)=\prod p_i^{e_i-1}(p_i-1)$ \\
+
+\textbf{Carmichael function $\lambda(n)$:} (smallest $m$ such that $a^m\equiv1\pmod n$ for all $\gcd(a,n)=1$) \\[1mm]
+For prime powers: \\
+\[
+\lambda(p^e) = 
+\begin{cases}
+\varphi(2^e)=2^{e-2} & \text{if }p=2, e\ge3,\\
+\varphi(p^e)=p^{e-1}(p-1) & \text{if }p \text{ odd prime}.
+\end{cases}
+\]
+For general $n$: $\lambda(n)=\mathrm{lcm}(\lambda(p_i^{e_i}))$ \\
