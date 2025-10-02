@@ -13,7 +13,7 @@ def findMinDistances(n, m, grid):
 
   for i in range(n):
     for j in range(m):
-      if grid[i][j] == 1 and not visited[i][j]:
+      if grid[i][j] and not visited[i][j]:
         numOfIslands += 1
         dfs(i, j)  # Total: O(n * m)
 
