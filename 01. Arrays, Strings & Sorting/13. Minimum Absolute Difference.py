@@ -1,16 +1,16 @@
 def minimumAbsDifference(nums: list[int]) -> list[list[int]]:
-    # O(n log n) / O(n^2)
-    nums.sort()
-    minDiff = nums[1] - nums[0]
-    minDiffPairs = []
-    for i in range(1, len(nums)):
-        curDiff = nums[i] - nums[i - 1]
-        if curDiff < minDiff:
-            minDiff = curDiff
-            minDiffPairs = [[nums[i - 1], nums[i]]]
-        elif curDiff == minDiff:
-            minDiffPairs.append([nums[i - 1], nums[i]])
-    return minDiffPairs
+  # O(n log n) / O(n^2)
+  nums.sort()
+  minDiff = nums[1] - nums[0]
+  minDiffPairs = []
+  for i in range(1, len(nums)):
+    curDiff = nums[i] - nums[i - 1]
+    if curDiff < minDiff:
+      minDiff = curDiff
+      minDiffPairs = [[nums[i - 1], nums[i]]]
+    elif curDiff == minDiff:
+      minDiffPairs.append([nums[i - 1], nums[i]])
+  return minDiffPairs
 
 
 print(minimumAbsDifference([4, 2, 1, 3]))

@@ -1,12 +1,12 @@
 def maxProfit(prices: list[int]) -> int:
-    # O(n) / O(1)
-    maxProfit = 0
-    maxPrice = prices[-1]
-    for buyDay in range(len(prices) - 2, -1, -1):
-        currMaxProfit = maxPrice - prices[buyDay]
-        maxProfit = max(maxProfit, currMaxProfit)
-        maxPrice = max(maxPrice, prices[buyDay])
-    return maxProfit
+  # O(n) / O(1)
+  maxProfit = 0
+  maxPrice = prices[-1]
+  for buyDay in range(len(prices) - 2, -1, -1):
+    currMaxProfit = maxPrice - prices[buyDay]
+    maxProfit = max(maxProfit, currMaxProfit)
+    maxPrice = max(maxPrice, prices[buyDay])
+  return maxProfit
 
 
 print(maxProfit([7, 1, 5, 3, 6, 4]))

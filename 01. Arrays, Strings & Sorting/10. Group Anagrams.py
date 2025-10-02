@@ -1,16 +1,16 @@
 def groupAnagrams(strings: list[str]) -> list[list[str]]:
-    # O(n log n)
-    strings.sort(key=lambda word: ''.join(sorted(word)))
-    currGroup = [strings[0]]
-    groups = []
-    for i in range(1, len(strings)):
-        if sorted(strings[i]) == sorted(strings[i - 1]):
-            currGroup.append(strings[i])
-        else:
-            groups.append(currGroup)
-            currGroup = [strings[i]]
-    groups.append(currGroup)
-    return groups
+  # O(n log n)
+  strings.sort(key=lambda word: ''.join(sorted(word)))
+  currGroup = [strings[0]]
+  groups = []
+  for i in range(1, len(strings)):
+    if sorted(strings[i]) == sorted(strings[i - 1]):
+      currGroup.append(strings[i])
+    else:
+      groups.append(currGroup)
+      currGroup = [strings[i]]
+  groups.append(currGroup)
+  return groups
 
 
 print(groupAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat']))

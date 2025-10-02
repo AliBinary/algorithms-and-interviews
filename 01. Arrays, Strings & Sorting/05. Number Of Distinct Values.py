@@ -1,11 +1,11 @@
 def numOfDistinctValues(nums: list[int]) -> int:
-    # O(n log n) / O(1)
-    sol = 1
-    nums.sort()
-    for i in range(1, len(nums)):
-        if nums[i] != nums[i - 1]:
-            sol += 1
-    return sol
+  # O(n log n) / O(1)
+  sol = 1
+  nums.sort()
+  for i in range(1, len(nums)):
+    if nums[i] != nums[i - 1]:
+      sol += 1
+  return sol
 
 
 print(numOfDistinctValues([1, 5, -3, 1, -4, 2, -4, 7, 7]))
