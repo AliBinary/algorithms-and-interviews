@@ -19,10 +19,10 @@ def repeatedSubstringPattern(s: str) -> bool:
 
 print(repeatedSubstringPattern('abcabcabcabc'))
 # Input: 'abab'
-# Output: true
+# Output: True
 # Input: 'aba'
-# Output: false
+# Output: False
 # Input: 'abcabcabcabc'
-# Output: true
+# Output: True
 # Usage: Check if a string is composed of repeated substring(s)
 # Useful for: string pattern matching, periodicity detection

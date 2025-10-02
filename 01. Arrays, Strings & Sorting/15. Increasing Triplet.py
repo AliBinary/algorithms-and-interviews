@@ -15,8 +15,8 @@ def increasingTriplet(nums: list[int]) -> bool:
 
 print(increasingTriplet([2, 1, 5, 0, 4, 6]))
 # Input: [5, 4, 3, 2, 1]
-# Output: false
+# Output: False
 # Input: [2, 1, 5, 0, 4, 6]
-# Output: true
+# Output: True
 # Usage: Check if an increasing triplet subsequence exists in an array
 # Useful for: subsequence problems, array analysis, greedy patterns
