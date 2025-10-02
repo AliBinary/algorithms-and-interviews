@@ -28,3 +28,5 @@ source = 0,
 destination = 5
 Output: True
 '''
+# Usage: Check if there is a valid path between two nodes in an undirected graph
+# Useful for: connectivity problems, graph traversal

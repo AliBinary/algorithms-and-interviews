@@ -33,3 +33,5 @@ edges = [[0, 1], [0, 2], [0, 3], [2, 1], [3, 4],
 source = 0,
 Output: [0, 1, 1, 1, 2, 3, 3, 4]
 '''
+# Usage: Find minimum distances from a source node in an unweighted graph
+# Useful for: shortest path problems, BFS traversal, graph analysis
