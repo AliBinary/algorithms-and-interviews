@@ -1,7 +1,7 @@
 from collections import defaultdict, deque
 
 
-def findMinDistances(n, edges, source):
+def findMinDistances(n: int, edges: list[list[int]], source: int):
   # O(n + m) / O(n + m)
   graph = defaultdict(list[int])  # / O(m)
   for edge in edges:  # O(m)

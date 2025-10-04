@@ -1,4 +1,4 @@
-def findMinDistances(n, m, grid):
+def findMinDistances(n: int, m: int, grid: list[list[int]]):
   # O(n * m) / O(n * m)
   def dfs(i, j):
     visited[i][j] = True

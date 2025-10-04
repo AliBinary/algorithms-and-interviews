@@ -1,7 +1,7 @@
 from collections import defaultdict
 
 
-def validPath(n, edges, source, destination):
+def validPath(n: int, edges: list[list[int]], source: int, destination: int):
   # O(n + m) / O(n + m)
   def dfs(node):
     visited.add(node)  # Total: O(n)

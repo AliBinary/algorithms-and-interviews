@@ -2,7 +2,7 @@ from collections import defaultdict
 import heapq  # MAX HEAP!!!
 
 
-def findMinDistances(n, edges, source):
+def findMinDistances(n: int, edges: list[list[int]], source: int):
   # O((m + n) log m) / O(m + n)
   graph = defaultdict(list)  # / O(m)
   for edge in edges:  # O(m)

@@ -9,7 +9,7 @@ def getAnswer(dist1, dist2):
   return min(dist1, dist2)
 
 
-def shortestAlternatingPaths(n, redEdges, blueEdges, source):
+def shortestAlternatingPaths(n: int, redEdges: list[list[int]], blueEdges: list[list[int]], source: int):
   # O(n + m) / O(n + m)
   graph = defaultdict(list)  # / O(n + m)
   for edge in redEdges:

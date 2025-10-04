@@ -1,43 +1,41 @@
-from collections import defaultdict, deque
+from collections import deque
 
 
-def wordLadder(words, begin, end):
+def getStarWord(word, i):
+  return word[:i] + "*" + word[i + 1:]
+
+
+def ladderLength(words: list[str], beginWord: str, endWord: str) -> int:
   # O(w * L^2) / O(w * L)
-  L = len(begin)
+  graph = {}  # / O(w * L)
+  for word in words:  # O(w)
+    for i in range(len(word)):  # O(L)
+      starWord = getStarWord(word, i)  # O(L)
+      graph[starWord] = graph.get(starWord, []) + [word]
 
-  all_combo = defaultdict(list[str])
-  for word in words:
-    for i in range(L):
-      pattern = word[:i] + '*' + word[i+1:]  # O(L)
-      all_combo[pattern].append(word)
-
-  queue = deque([(begin, 0)])
-  visited = set([begin])  # / O(w)
+  queue = deque()  # / O(w)
+  minDist = {}
+  queue.append(beginWord)
+  minDist[beginWord] = 1
 
   while queue:  # O(w)
-    word, dist = queue.popleft()
-    if word == end:
-      return dist
-
-    for i in range(L):  # O(L)
-      pattern = word[:i] + '*' + word[i+1:]  # O(L)
-      for nei in all_combo[pattern]:  # Total: O(w)
-        if nei not in visited:
-          visited.add(nei)
-          queue.append((nei, dist + 1))
-
-      all_combo[pattern] = []
-
-  return -1
+    word = queue.popleft()
+    if endWord == word:
+      break
+    for i in range(len(word)):  # O(L)
+      starWord = getStarWord(word, i)  # O(L)
+      for nextWord in graph.get(starWord, []):  # Total: O(w * L)
+        if nextWord not in minDist:
+          minDist[nextWord] = minDist[word] + 1
+          queue.append(nextWord)
+  return minDist.get(endWord, 0)
 
 
-print(wordLadder(['hit', 'hot', 'dot', 'lot',
-                  'dog', 'log', 'cog'], 'hit', 'cog'))
+print(ladderLength(['hit', 'hot', 'dot', 'lot',
+                    'dog', 'log', 'cog'], 'hit', 'cog'))
 '''
 Input: words = ['hit','hot','dot','lot','dog','log','cog']
 begin = 'hit'
 end = 'cog'
-Output = 4
+Output = 5
 '''
-# Usage: Find minimum steps to transform one word into another using BFS (Word Ladder)
-# Useful for: shortest path in word graphs, interview problems, NLP edit distance approximations
