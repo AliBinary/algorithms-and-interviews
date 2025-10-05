@@ -2,19 +2,15 @@ def maxSumOf3SubArrays(nums: list[int]):
   # O(n) / O(n)
   n = len(nums)
   leftMaxSum = [0] * n  # / O(n)
-
   leftMaxSum[1] = nums[0]
   maxSum = nums[0]
-
   for i in range(2, n):  # O(n)
     maxSum = nums[i - 1] + max(maxSum, 0)
     leftMaxSum[i] = max(leftMaxSum[i - 1], maxSum)
 
   rightMaxSum = [0] * n  # / O(n)
-
   rightMaxSum[-1] = nums[-1]
   maxSum = nums[-1]
-
   for i in range(n - 2, -1, -1):  # O(n)
     maxSum = nums[i] + max(maxSum, 0)
     rightMaxSum[i] = max(rightMaxSum[i + 1], maxSum)
